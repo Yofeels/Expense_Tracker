@@ -1,0 +1,47 @@
+<div class="container">
+
+    <h1>💰 Expense Tracker</h1>
+
+    <p class="subtitle">
+        Keep track of your daily expenses
+    </p>
+
+    <div class="form">
+
+        <label>Expense Name</label>
+
+        <input
+            type="text"
+            placeholder="Enter expense description"
+            [(ngModel)]="expenseName">
+
+        <label>Amount</label>
+
+        <input
+            type="number"
+            placeholder="Enter amount"
+            [(ngModel)]="amount">
+
+        <button (click)="addExpense()">
+            Add Expense
+        </button>
+
+    </div>
+
+    <div class="expense-card">
+
+        <h2>Latest Expense</h2>
+
+        <p>
+            <strong>Expense :</strong>
+            {{ latestExpenseName || 'Not Added' }}
+        </p>
+
+        <p>
+            <strong>Amount :</strong>
+            ₹{{ latestAmount }}
+        </p>
+
+    </div>
+
+</div>
